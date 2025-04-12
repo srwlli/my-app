@@ -9,7 +9,6 @@ function getInitialTheme(): string {
   try {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) return savedTheme;
-
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   } catch (error) {
     console.error('Error getting initial theme:', error);
@@ -29,6 +28,18 @@ export function updateDocumentClass(newTheme: string) {
   } catch (error) {
     console.error('Error updating document class:', error);
   }
+}
+
+// ✅ THIS IS THE FUNCTION YOU MUST HAVE
+export function toggleTheme() {
+  theme.update(current => {
+    const next = current === 'dark' ? 'light' : 'dark';
+    if (browser) {
+      localStorage.setItem('theme', next);
+      updateDocumentClass(next);
+    }
+    return next;
+  });
 }
 
 if (browser) {

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "$lib/components/ui/card";
-  import { Button } from "$lib/components/ui/button";
-  import { Settings } from "lucide-svelte";
+  import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '$lib/components/ui/card';
+  import { Button } from '$lib/components/ui/button';
+  import { Settings } from 'lucide-svelte';
 </script>
 
 <div class="container mx-auto py-10">

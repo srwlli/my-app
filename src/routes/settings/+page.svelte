@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-  import { Button } from "@/components/ui/button";
-  import { Moon, Sun } from "lucide-svelte";
-  import { theme, toggleTheme } from "@/utils/theme";
+  import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '$lib/components/ui/card';
+  import { Button } from '$lib/components/ui/button';
+  import { Moon, Sun } from 'lucide-svelte';
+  import { theme, toggleTheme } from '$lib/utils/theme';
+  import { page } from '$app/stores';
 </script>
 
 <div class="container mx-auto py-10">

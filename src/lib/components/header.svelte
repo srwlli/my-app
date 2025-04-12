@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  import { Button } from "$lib/components/ui/button";
-  import { Menu } from "lucide-svelte";
+  import { Button } from '$lib/components/ui/button';
+  import { Menu } from 'lucide-svelte';
   import { browser } from '$app/environment';
 
   let isOpen = false;
@@ -29,7 +29,6 @@
 
 <header class="fixed top-0 left-0 right-0 h-16 bg-background border-b z-50 flex items-center px-4">
   <div class="w-full max-w-7xl mx-auto flex justify-between items-center">
-    <!-- Left-aligned dropdown menu -->
     <div class="relative" bind:this={dropdownRef}>
       <Button variant="ghost" size="icon" on:click={() => isOpen = !isOpen}>
         <Menu class="h-5 w-5" />
@@ -44,7 +43,6 @@
       {/if}
     </div>
 
-    <!-- Right-aligned title -->
     <div>
       <h1 class="text-xl font-bold">MyDash</h1>
     </div>
