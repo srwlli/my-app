@@ -27,8 +27,9 @@
   });
 </script>
 
-<header class="fixed top-0 left-0 right-0 h-16 bg-background border-b z-50 flex items-center px-4">
+<header class="fixed top-0 left-0 right-0 h-12 bg-background border-b z-50 flex items-center px-4">
   <div class="w-full max-w-7xl mx-auto flex justify-between items-center">
+    <!-- Left-aligned dropdown -->
     <div class="relative" bind:this={dropdownRef}>
       <Button variant="ghost" size="icon" on:click={() => isOpen = !isOpen}>
         <Menu class="h-5 w-5" />
@@ -39,14 +40,21 @@
         <div class="absolute mt-2 w-40 bg-white dark:bg-gray-800 shadow-lg border rounded z-50">
           <a href="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
           <a href="/settings" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Settings</a>
+          <a href="https://example.com" target="_blank" rel="noopener" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Page 1</a>
+          <a href="https://example.com" target="_blank" rel="noopener" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Page 2</a>
+          <a href="https://example.com" target="_blank" rel="noopener" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Page 3</a>
+          <a href="https://example.com" target="_blank" rel="noopener" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Page 4</a>
+          <a href="https://example.com" target="_blank" rel="noopener" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Page 5</a>
         </div>
       {/if}
     </div>
 
+    <!-- Right-aligned title -->
     <div>
       <h1 class="text-xl font-bold">MyDash</h1>
     </div>
   </div>
 </header>
 
-<div class="h-16"></div>
+<!-- Spacer to push page content below the fixed header -->
+<div class="h-4"></div>
