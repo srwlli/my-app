@@ -5,8 +5,6 @@
 </script>
 
 <div class="container mx-auto pt-2 pb-4">
-  
-  
   <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
     <!-- Settings Card -->
     <Card class="w-full">
